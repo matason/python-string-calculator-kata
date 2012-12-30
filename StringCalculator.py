@@ -1,5 +1,7 @@
 def add(numbers):
-  if numbers == "":
-    return 0
+  total = 0
 
-  return sum(map(int, numbers.split(",")))
+  if numbers != "":
+    total = sum(map(int, numbers.split(",")))
+
+  return total
