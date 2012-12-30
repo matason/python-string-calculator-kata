@@ -1,7 +1,8 @@
-def add(numbers):
+def add(*arguments):
   total = 0
 
-  if numbers != "":
-    total = sum(map(int, numbers.split(",")))
+  for arg in arguments:
+    if arg != "":
+      total += sum(map(int, arg.split(",")))
 
   return total
