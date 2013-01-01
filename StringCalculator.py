@@ -6,9 +6,9 @@ def add(*arguments):
   total = 0
 
   for arg in arguments:
-    arg = normaliseSuppliedSeparator(arg)
-    arg = normaliseSeparator(arg)
     if arg != "":
+      arg = normaliseSuppliedSeparator(arg)
+      arg = normaliseSeparator(arg)
       total += sum(map(int, arg.split(SEPARATOR)))
 
   return total
