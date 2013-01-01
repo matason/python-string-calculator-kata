@@ -5,11 +5,11 @@ SEPARATOR = ","
 def add(*arguments):
   total = 0
 
-  for arg in arguments:
-    if arg != "":
-      arg = normaliseSuppliedSeparator(arg)
-      arg = normaliseSeparator(arg)
-      total += sum(map(int, arg.split(SEPARATOR)))
+  for numbers in arguments:
+    if numbers != "":
+      numbers = normaliseSuppliedSeparator(numbers)
+      numbers = normaliseSeparator(numbers)
+      total += sum(map(int, numbers.split(SEPARATOR)))
 
   return total
 
